@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_27bf6befa16e761b5591fdd7bc2e06b4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_27bf6befa16e761b5591fdd7bc2e06b4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_27bf6befa16e761b5591fdd7bc2e06b4 = L.map(
+                "map_27bf6befa16e761b5591fdd7bc2e06b4",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6b405d919e1c5710fb77f6106147064d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6b405d919e1c5710fb77f6106147064d.addTo(map_27bf6befa16e761b5591fdd7bc2e06b4);
+        
+    
+            var marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_79788d183564e65d6d9e15337ea1da22 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_19916975576cc795f7ff971a124671cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7f18608e1bef2a3d0c0992ee831ebf8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42142121eb5124c9231476ba50566c6b = $(`<div id="html_42142121eb5124c9231476ba50566c6b" style="width: 100.0%; height: 100.0%;">IP: 199.232.37.164<br>URL: https://g1.nyt.com/fonts/family/cheltenham-small/cheltenham-small-italic-400.cdfa0ec29cca8c2d2f54c79d898e15c1.woff2</div>`)[0];
+                popup_e7f18608e1bef2a3d0c0992ee831ebf8.setContent(html_42142121eb5124c9231476ba50566c6b);
+            
+        
+
+        marker_79788d183564e65d6d9e15337ea1da22.bindPopup(popup_e7f18608e1bef2a3d0c0992ee831ebf8)
+        ;
+
+        
+    
+    
+                marker_79788d183564e65d6d9e15337ea1da22.setIcon(icon_19916975576cc795f7ff971a124671cc);
+            
+    
+            var marker_a302c07e6110089f1f30aa16fa005d30 = L.marker(
+                [37.7621, -122.3971],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_b28820f4eab0862343e1157ed16ff077 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd1d10f675e4c03d257088c6833149d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9261fc26dc2d2ee77a8fbad45b2388d1 = $(`<div id="html_9261fc26dc2d2ee77a8fbad45b2388d1" style="width: 100.0%; height: 100.0%;">IP: 104.26.7.229<br>URL: https://platform.iteratehq.com/loader.js</div>`)[0];
+                popup_fd1d10f675e4c03d257088c6833149d6.setContent(html_9261fc26dc2d2ee77a8fbad45b2388d1);
+            
+        
+
+        marker_a302c07e6110089f1f30aa16fa005d30.bindPopup(popup_fd1d10f675e4c03d257088c6833149d6)
+        ;
+
+        
+    
+    
+                marker_a302c07e6110089f1f30aa16fa005d30.setIcon(icon_b28820f4eab0862343e1157ed16ff077);
+            
+    
+            var marker_86a52040ea6cb683b970cd1b9df8be70 = L.marker(
+                [37.7621, -122.3971],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_558c1dba13156acbb84fb8269ef556b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4cd341c61106ef1f92f65b3f4a96122f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d471c571ca59f387213714aba8f2bb37 = $(`<div id="html_d471c571ca59f387213714aba8f2bb37" style="width: 100.0%; height: 100.0%;">IP: 172.67.71.156<br>URL: https://iteratehq.com/api/v1/surveys/embed</div>`)[0];
+                popup_4cd341c61106ef1f92f65b3f4a96122f.setContent(html_d471c571ca59f387213714aba8f2bb37);
+            
+        
+
+        marker_86a52040ea6cb683b970cd1b9df8be70.bindPopup(popup_4cd341c61106ef1f92f65b3f4a96122f)
+        ;
+
+        
+    
+    
+                marker_86a52040ea6cb683b970cd1b9df8be70.setIcon(icon_558c1dba13156acbb84fb8269ef556b7);
+            
+    
+            var marker_8c4cd537d55f46709f01436296fab8b2 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_4356bb68ba2b8499dff8f69e817a5415 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5ba80a62711ed36a3c4a4db807a8f71d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c64e016c4603e45576bea4c08cd8bcd1 = $(`<div id="html_c64e016c4603e45576bea4c08cd8bcd1" style="width: 100.0%; height: 100.0%;">IP: 142.250.65.162<br>URL: https://adservice.google.com/ddm/fls/z/dc_pre=CMGl5Nqo1o4DFdIvaAgd4YoX5g;src=5290727;type=allpa0;cat=nyti-0;ord=1;num=475688012503;npa=0;gcldc=*;gclgs=1;gclst=4252531612;gcllp=136575535;gclaw=*;auiddc=*;u17=https%3A%2F%2Fwww.nytimes.com%2F;u5=%2CCK%2CXPASS%2C;u18=sub;uaa=arm;uab=64;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.158%7CGoogle%2520Chrome%3B138.0.7204.158;uamb=0;uam=;uap=macOS;uapv=14.7.2;uaw=0;pscdl=noapi;frm=0;_tu=KpA;gtm=45fe57m3v9181657669z872703797za200zb72703797zd72703797;gcs=G111;gcd=13t3t3t3t5l1;dma=0;dc_fmt=2;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813;epver=2;dc_random=1753388376609;_dc_test=1;~oref=https%3A%2F%2Fwww.nytimes.com%2F</div>`)[0];
+                popup_5ba80a62711ed36a3c4a4db807a8f71d.setContent(html_c64e016c4603e45576bea4c08cd8bcd1);
+            
+        
+
+        marker_8c4cd537d55f46709f01436296fab8b2.bindPopup(popup_5ba80a62711ed36a3c4a4db807a8f71d)
+        ;
+
+        
+    
+    
+                marker_8c4cd537d55f46709f01436296fab8b2.setIcon(icon_4356bb68ba2b8499dff8f69e817a5415);
+            
+    
+            var marker_46d5bf448db3afc5bc5432bf25d1a6b4 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_568a02b1385281e9442f795c2c432254 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4bac726fb48adb806bdd382dd760ff2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec2808b2e687cf26f0e399a30f7b1159 = $(`<div id="html_ec2808b2e687cf26f0e399a30f7b1159" style="width: 100.0%; height: 100.0%;">IP: 142.250.65.198<br>URL: https://ad.doubleclick.net/activity;src=5290727;type=allpa0;cat=nyti-0;ord=1;num=475688012503;npa=0;gcldc=Cj0KCQjwgIXCBhDBARIsAELC9ZiC97SF-F2J-YLrbe1hyfXpxYIp12lrOtYZhhDlW4Wsc_stPAC5NeMaAglhEALw_wcB;gclgs=1;gclst=4252531612;gcllp=136575535;gclaw=Cj0KCQjwgIXCBhDBARIsAELC9ZiC97SF-F2J-YLrbe1hyfXpxYIp12lrOtYZhhDlW4Wsc_stPAC5NeMaAglhEALw_wcB;auiddc=788295013.1745979227;u17=https%3A%2F%2Fwww.nytimes.com%2F;u5=%2CCK%2CXPASS%2C;u18=sub;uaa=arm;uab=64;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.158%7CGoogle%2520Chrome%3B138.0.7204.158;uamb=0;uam=;uap=macOS;uapv=14.7.2;uaw=0;pscdl=noapi;frm=0;_tu=KpA;gtm=45fe57m3v9181657669z872703797za200zb72703797zd72703797;gcs=G111;gcd=13t3t3t3t5l1;dma=0;dc_fmt=3;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813;epver=2;dc_random=1753388376609;~oref=https%3A%2F%2Fwww.nytimes.com%2F?</div>`)[0];
+                popup_a4bac726fb48adb806bdd382dd760ff2.setContent(html_ec2808b2e687cf26f0e399a30f7b1159);
+            
+        
+
+        marker_46d5bf448db3afc5bc5432bf25d1a6b4.bindPopup(popup_a4bac726fb48adb806bdd382dd760ff2)
+        ;
+
+        
+    
+    
+                marker_46d5bf448db3afc5bc5432bf25d1a6b4.setIcon(icon_568a02b1385281e9442f795c2c432254);
+            
+    
+            var marker_d1d35cfdcf338f921e5cc1e5c46cca75 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_238ea1c75ebb1df9a5f227e3c83e846c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8780f9e8171375ade33cf71fe7097b42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25fe476a68a216853a48c8bfe9bf29c9 = $(`<div id="html_25fe476a68a216853a48c8bfe9bf29c9" style="width: 100.0%; height: 100.0%;">IP: 142.251.40.194<br>URL: https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202507210101/pubads_impl.js</div>`)[0];
+                popup_8780f9e8171375ade33cf71fe7097b42.setContent(html_25fe476a68a216853a48c8bfe9bf29c9);
+            
+        
+
+        marker_d1d35cfdcf338f921e5cc1e5c46cca75.bindPopup(popup_8780f9e8171375ade33cf71fe7097b42)
+        ;
+
+        
+    
+    
+                marker_d1d35cfdcf338f921e5cc1e5c46cca75.setIcon(icon_238ea1c75ebb1df9a5f227e3c83e846c);
+            
+    
+            var marker_140f4212f80ca0becb0b0e51712ff294 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_0ec659ed4e4e905469971f21e49386f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0df8faea576ac11a52d86e33bed554d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e7fa62cadc2536b4c57b50e8ab2ba31 = $(`<div id="html_1e7fa62cadc2536b4c57b50e8ab2ba31" style="width: 100.0%; height: 100.0%;">IP: 18.164.116.69<br>URL: https://launchpad.privacymanager.io/latest/launchpad.bundle.js</div>`)[0];
+                popup_0df8faea576ac11a52d86e33bed554d1.setContent(html_1e7fa62cadc2536b4c57b50e8ab2ba31);
+            
+        
+
+        marker_140f4212f80ca0becb0b0e51712ff294.bindPopup(popup_0df8faea576ac11a52d86e33bed554d1)
+        ;
+
+        
+    
+    
+                marker_140f4212f80ca0becb0b0e51712ff294.setIcon(icon_0ec659ed4e4e905469971f21e49386f5);
+            
+    
+            var marker_f8826c31788e82bc5d21a02c49070178 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_ea40c82b673798b9dd505ed925332281 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_785d1f494a65a814b909c18f5921d04b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4fe4ac2d18ad43986679d564a9f22824 = $(`<div id="html_4fe4ac2d18ad43986679d564a9f22824" style="width: 100.0%; height: 100.0%;">IP: 142.250.80.40<br>URL: https://www.googletagmanager.com/gtag/destination?id=DC-5290727&cx=c&gtm=45He57m3v72703797za200&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211</div>`)[0];
+                popup_785d1f494a65a814b909c18f5921d04b.setContent(html_4fe4ac2d18ad43986679d564a9f22824);
+            
+        
+
+        marker_f8826c31788e82bc5d21a02c49070178.bindPopup(popup_785d1f494a65a814b909c18f5921d04b)
+        ;
+
+        
+    
+    
+                marker_f8826c31788e82bc5d21a02c49070178.setIcon(icon_ea40c82b673798b9dd505ed925332281);
+            
+    
+            var marker_f70b2796e43823f471ae43a57990f16b = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_ca02b8280154772377219a50d50f9f1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b3b72e3c8c6b7cff7001303953b9935 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d12ceafad9b4f383cc72f0594cfd614b = $(`<div id="html_d12ceafad9b4f383cc72f0594cfd614b" style="width: 100.0%; height: 100.0%;">IP: 108.139.47.108<br>URL: https://sb.scorecardresearch.com/internal-cs/default/beacon.js</div>`)[0];
+                popup_2b3b72e3c8c6b7cff7001303953b9935.setContent(html_d12ceafad9b4f383cc72f0594cfd614b);
+            
+        
+
+        marker_f70b2796e43823f471ae43a57990f16b.bindPopup(popup_2b3b72e3c8c6b7cff7001303953b9935)
+        ;
+
+        
+    
+    
+                marker_f70b2796e43823f471ae43a57990f16b.setIcon(icon_ca02b8280154772377219a50d50f9f1c);
+            
+    
+            var marker_18ea3ece39f628898ca79dd3c1463ff0 = L.marker(
+                [39.0437, -77.4875],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_f80166a051a2dac13c00031dc898365d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42f15c2dfb32568e24e06a468fea8ce2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d68b032947197354949f6af0c49b3525 = $(`<div id="html_d68b032947197354949f6af0c49b3525" style="width: 100.0%; height: 100.0%;">IP: 52.55.227.116<br>URL: https://pnytimes.chartbeat.net/ping?h=nytimes.com&p=nytimes.com%2F&u=BQteNFB7AJGVBqEmq0&d=nytimes.com&g=16698&g0=Homepage&g1=No%20Author&g6=%2F29390238%2Fnyt%2Fhomepage%7C%7C5&n=0&f=fc7e7&c=0&x=137&m=137&y=23213&o=621&w=707&j=45&R=1&W=0&I=0&E=0&e=0&r=&PA=https%3A%2F%2Fwww.nytimes.com%2F&b=2532&t=Bh4RHYCIpV7KDid94Vys5mdRlHJx&V=150&z=t%3DBZxF2fBhTD-aBSVmj1BFvS28CD4MZz%26E%3D3%26x%3D137%26c%3D0.29%26y%3D21262%26w%3D707&i=The%20New%20York%20Times%20-%20Breaking%20News%2C%20US%20News%2C%20World%20News%20and%20Videos&tz=240&_acct=paid&sn=1&sv=DWcFvdDV0cKXbaE2hD-k75vDxFbRT&sr=external&sd=1&im=06672ff3&_</div>`)[0];
+                popup_42f15c2dfb32568e24e06a468fea8ce2.setContent(html_d68b032947197354949f6af0c49b3525);
+            
+        
+
+        marker_18ea3ece39f628898ca79dd3c1463ff0.bindPopup(popup_42f15c2dfb32568e24e06a468fea8ce2)
+        ;
+
+        
+    
+    
+                marker_18ea3ece39f628898ca79dd3c1463ff0.setIcon(icon_f80166a051a2dac13c00031dc898365d);
+            
+    
+            var marker_31b3c1f16afa3bf4a882ced0f209201b = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_84c9487d8f6b9c985aea5e7d6be0316b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da90aaa1883bba211b266029284a9b1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5cab254afa60df3db987e813c6957c6 = $(`<div id="html_e5cab254afa60df3db987e813c6957c6" style="width: 100.0%; height: 100.0%;">IP: 18.173.132.23<br>URL: https://sb.scorecardresearch.com/b?c1=2&c2=3005403&cs_it=b1&cv=4.13.0%2B2504041036&ns__t=1753388375665&ns_c=UTF-8&cs_cfg=1001110&cs_fpid=FdvbKyAFAvM_L0ymgxzglG&cs_fpit=c&cs_fpdm=*null&cs_fpdt=*null&c7=https%3A%2F%2Fwww.nytimes.com%2F&c8=The%20New%20York%20Times%20-%20Breaking%20News%2C%20US%20News%2C%20World%20News%20and%20Videos&c9=</div>`)[0];
+                popup_da90aaa1883bba211b266029284a9b1f.setContent(html_e5cab254afa60df3db987e813c6957c6);
+            
+        
+
+        marker_31b3c1f16afa3bf4a882ced0f209201b.bindPopup(popup_da90aaa1883bba211b266029284a9b1f)
+        ;
+
+        
+    
+    
+                marker_31b3c1f16afa3bf4a882ced0f209201b.setIcon(icon_84c9487d8f6b9c985aea5e7d6be0316b);
+            
+    
+            var marker_919d067f58ed110b9188f19ff2cd5d7f = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_9b0e782a04e693ce5e853374ad74c0d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_437456d27635e74557b035359cf71595 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d175bf8c53a589290a30b68ab8b067c5 = $(`<div id="html_d175bf8c53a589290a30b68ab8b067c5" style="width: 100.0%; height: 100.0%;">IP: 108.138.127.228<br>URL: https://static.chartbeat.com/js/chartbeat_video.js</div>`)[0];
+                popup_437456d27635e74557b035359cf71595.setContent(html_d175bf8c53a589290a30b68ab8b067c5);
+            
+        
+
+        marker_919d067f58ed110b9188f19ff2cd5d7f.bindPopup(popup_437456d27635e74557b035359cf71595)
+        ;
+
+        
+    
+    
+                marker_919d067f58ed110b9188f19ff2cd5d7f.setIcon(icon_9b0e782a04e693ce5e853374ad74c0d2);
+            
+    
+            var marker_6cb118711894b9d27249624095958fa1 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_0880f4a58a22cb06738aa50458e5939f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d5bb6747802ca84ab7040aeb938c49a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7625d0e33d914c8f530d65cd853df2dc = $(`<div id="html_7625d0e33d914c8f530d65cd853df2dc" style="width: 100.0%; height: 100.0%;">IP: 18.238.55.98<br>URL: https://dd.nytimes.com/js/</div>`)[0];
+                popup_4d5bb6747802ca84ab7040aeb938c49a.setContent(html_7625d0e33d914c8f530d65cd853df2dc);
+            
+        
+
+        marker_6cb118711894b9d27249624095958fa1.bindPopup(popup_4d5bb6747802ca84ab7040aeb938c49a)
+        ;
+
+        
+    
+    
+                marker_6cb118711894b9d27249624095958fa1.setIcon(icon_0880f4a58a22cb06738aa50458e5939f);
+            
+    
+            var marker_daa47a1e79187b54cecdb0b61006ae63 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_206251012f486233e455bc6013202ff5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1098bcc09917fd31344bdeee7872823 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ad0677f80b99bce73dfb43d314e6c14 = $(`<div id="html_5ad0677f80b99bce73dfb43d314e6c14" style="width: 100.0%; height: 100.0%;">IP: 18.164.116.29<br>URL: https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi.js</div>`)[0];
+                popup_e1098bcc09917fd31344bdeee7872823.setContent(html_5ad0677f80b99bce73dfb43d314e6c14);
+            
+        
+
+        marker_daa47a1e79187b54cecdb0b61006ae63.bindPopup(popup_e1098bcc09917fd31344bdeee7872823)
+        ;
+
+        
+    
+    
+                marker_daa47a1e79187b54cecdb0b61006ae63.setIcon(icon_206251012f486233e455bc6013202ff5);
+            
+    
+            var marker_6ab99d5bd4bfa2fc0e5eb263e00063cc = L.marker(
+                [39.0437, -77.4875],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_20a201de576a105349102a24788b9610 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_38eb8d5f55e6768ca136eed3585d5854 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06068cdfeed2be1c54cc93adb09fe49f = $(`<div id="html_06068cdfeed2be1c54cc93adb09fe49f" style="width: 100.0%; height: 100.0%;">IP: 44.195.146.220<br>URL: https://a.nytimes.com/svc/nyt/v2/data-layer</div>`)[0];
+                popup_38eb8d5f55e6768ca136eed3585d5854.setContent(html_06068cdfeed2be1c54cc93adb09fe49f);
+            
+        
+
+        marker_6ab99d5bd4bfa2fc0e5eb263e00063cc.bindPopup(popup_38eb8d5f55e6768ca136eed3585d5854)
+        ;
+
+        
+    
+    
+                marker_6ab99d5bd4bfa2fc0e5eb263e00063cc.setIcon(icon_20a201de576a105349102a24788b9610);
+            
+    
+            var marker_8086bace74133e36d217b30f2c06f7e5 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_da99f606322cb5075f77cf87b84b605d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88ca676a9ba74269874180358650dcee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87f3cfdb154b99b882e05945cd23362d = $(`<div id="html_87f3cfdb154b99b882e05945cd23362d" style="width: 100.0%; height: 100.0%;">IP: 108.138.120.103<br>URL: https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js</div>`)[0];
+                popup_88ca676a9ba74269874180358650dcee.setContent(html_87f3cfdb154b99b882e05945cd23362d);
+            
+        
+
+        marker_8086bace74133e36d217b30f2c06f7e5.bindPopup(popup_88ca676a9ba74269874180358650dcee)
+        ;
+
+        
+    
+    
+                marker_8086bace74133e36d217b30f2c06f7e5.setIcon(icon_da99f606322cb5075f77cf87b84b605d);
+            
+    
+            var marker_a1c35b9a0417fd1c01c9b4cdaee86f0f = L.marker(
+                [37.7621, -122.3971],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_32a2e9a1b092ce6a87d1bcaafb642c48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df6f5a6e370c437790afdcb36dda6bcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4e65991c2b61af47a55123fc3c4076d = $(`<div id="html_e4e65991c2b61af47a55123fc3c4076d" style="width: 100.0%; height: 100.0%;">IP: 104.26.0.90<br>URL: https://cdn.brandmetrics.com/tag/85a1ebf79602421aa1c2c2f24d32cb6c/nyt.js</div>`)[0];
+                popup_df6f5a6e370c437790afdcb36dda6bcf.setContent(html_e4e65991c2b61af47a55123fc3c4076d);
+            
+        
+
+        marker_a1c35b9a0417fd1c01c9b4cdaee86f0f.bindPopup(popup_df6f5a6e370c437790afdcb36dda6bcf)
+        ;
+
+        
+    
+    
+                marker_a1c35b9a0417fd1c01c9b4cdaee86f0f.setIcon(icon_32a2e9a1b092ce6a87d1bcaafb642c48);
+            
+    
+            var marker_bb8066ada55a304949c6f30203ab4559 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_21e10b8f828025845c9b71ea57457789 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab3074bb3c1621b9e9e9d757e682c7c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f276521f9e851f2ab3005e4a34b30037 = $(`<div id="html_f276521f9e851f2ab3005e4a34b30037" style="width: 100.0%; height: 100.0%;">IP: 13.249.91.114<br>URL: https://ats-wrapper.privacymanager.io/ats-modules/087423d8-0b74-47f4-a79b-03ddad419681/ats.js</div>`)[0];
+                popup_ab3074bb3c1621b9e9e9d757e682c7c7.setContent(html_f276521f9e851f2ab3005e4a34b30037);
+            
+        
+
+        marker_bb8066ada55a304949c6f30203ab4559.bindPopup(popup_ab3074bb3c1621b9e9e9d757e682c7c7)
+        ;
+
+        
+    
+    
+                marker_bb8066ada55a304949c6f30203ab4559.setIcon(icon_21e10b8f828025845c9b71ea57457789);
+            
+    
+            var marker_a2b399f4e416d521f2fd82771fe3935c = L.marker(
+                [39.0437, -77.4875],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_14c079a61c1ff7ab755546aac501cf6d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08b9943027f2afaa2b44e06d49ce7ea5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e56f3f0b3fb377dfd5172b7f65440833 = $(`<div id="html_e56f3f0b3fb377dfd5172b7f65440833" style="width: 100.0%; height: 100.0%;">IP: 52.203.246.132<br>URL: https://purr.nytimes.com/v1/purr-cache</div>`)[0];
+                popup_08b9943027f2afaa2b44e06d49ce7ea5.setContent(html_e56f3f0b3fb377dfd5172b7f65440833);
+            
+        
+
+        marker_a2b399f4e416d521f2fd82771fe3935c.bindPopup(popup_08b9943027f2afaa2b44e06d49ce7ea5)
+        ;
+
+        
+    
+    
+                marker_a2b399f4e416d521f2fd82771fe3935c.setIcon(icon_14c079a61c1ff7ab755546aac501cf6d);
+            
+    
+            var marker_69e649ca548c3ab51847a83860633017 = L.marker(
+                [47.6062, -122.3321],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_2adaadbf44d3bb65bee63efd362ccf06 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46b27a762ff3e616000c314cc3ddc5d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c4058237f5b6b11d378af357764b1c5 = $(`<div id="html_8c4058237f5b6b11d378af357764b1c5" style="width: 100.0%; height: 100.0%;">IP: 2600:9000:2511:f000:4:b37b:9440:93a1<br>URL: https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi-ip.js</div>`)[0];
+                popup_46b27a762ff3e616000c314cc3ddc5d5.setContent(html_8c4058237f5b6b11d378af357764b1c5);
+            
+        
+
+        marker_69e649ca548c3ab51847a83860633017.bindPopup(popup_46b27a762ff3e616000c314cc3ddc5d5)
+        ;
+
+        
+    
+    
+                marker_69e649ca548c3ab51847a83860633017.setIcon(icon_2adaadbf44d3bb65bee63efd362ccf06);
+            
+    
+            var marker_842c6d447bd38e00f86829bb054c1e67 = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_2ae84bf6bd3346a35daa4d73401b89ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f247aed7e5768b517ab913c2cd9cfa76 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f5073308bceab6892b69007e6b3c2ae = $(`<div id="html_4f5073308bceab6892b69007e6b3c2ae" style="width: 100.0%; height: 100.0%;">IP: 142.250.81.226<br>URL: https://td.doubleclick.net/td/fls/rul/activityi;fledge=1;src=5290727;type=allpa0;cat=nyti-0;ord=1;num=475688012503;npa=0;gcldc=Cj0KCQjwgIXCBhDBARIsAELC9ZiC97SF-F2J-YLrbe1hyfXpxYIp12lrOtYZhhDlW4Wsc_stPAC5NeMaAglhEALw_wcB;gclgs=1;gclst=4252531612;gcllp=136575535;gclaw=Cj0KCQjwgIXCBhDBARIsAELC9ZiC97SF-F2J-YLrbe1hyfXpxYIp12lrOtYZhhDlW4Wsc_stPAC5NeMaAglhEALw_wcB;auiddc=788295013.1745979227;u17=https%3A%2F%2Fwww.nytimes.com%2F;u5=%2CCK%2CXPASS%2C;u18=sub;uaa=arm;uab=64;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.158%7CGoogle%2520Chrome%3B138.0.7204.158;uamb=0;uam=;uap=macOS;uapv=14.7.2;uaw=0;pscdl=noapi;frm=0;_tu=KpA;gtm=45fe57m3v9181657669z872703797za200zb72703797zd72703797;gcs=G111;gcd=13t3t3t3t5l1;dma=0;dc_fmt=9;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813;epver=2;dc_random=1753388376609;_dc_test=1;~oref=https%3A%2F%2Fwww.nytimes.com%2F?</div>`)[0];
+                popup_f247aed7e5768b517ab913c2cd9cfa76.setContent(html_4f5073308bceab6892b69007e6b3c2ae);
+            
+        
+
+        marker_842c6d447bd38e00f86829bb054c1e67.bindPopup(popup_f247aed7e5768b517ab913c2cd9cfa76)
+        ;
+
+        
+    
+    
+                marker_842c6d447bd38e00f86829bb054c1e67.setIcon(icon_2ae84bf6bd3346a35daa4d73401b89ac);
+            
+    
+            var marker_2d715c161d07fc9bc33f2b2926b10e3e = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_ad37b76615d077be14ee10b531968083 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f696b480a5e393bfa88ecc565e09dae4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed0b05aaa6bdf325ad4ffdfea72efecd = $(`<div id="html_ed0b05aaa6bdf325ad4ffdfea72efecd" style="width: 100.0%; height: 100.0%;">IP: 142.250.176.194<br>URL: https://securepubads.g.doubleclick.net/static/topics/topics_frame.html</div>`)[0];
+                popup_f696b480a5e393bfa88ecc565e09dae4.setContent(html_ed0b05aaa6bdf325ad4ffdfea72efecd);
+            
+        
+
+        marker_2d715c161d07fc9bc33f2b2926b10e3e.bindPopup(popup_f696b480a5e393bfa88ecc565e09dae4)
+        ;
+
+        
+    
+    
+                marker_2d715c161d07fc9bc33f2b2926b10e3e.setIcon(icon_ad37b76615d077be14ee10b531968083);
+            
+    
+            var marker_385814bf3ce95a9fafc151c2f4fbb55e = L.marker(
+                [40.7143, -74.006],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_69a86209f02ac4e941847f6f2a206d5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cabac8e807aefb481b9a0825f6ae8f04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_240d8a9f17e8b78df679d0991f086956 = $(`<div id="html_240d8a9f17e8b78df679d0991f086956" style="width: 100.0%; height: 100.0%;">IP: 13.35.93.13<br>URL: https://launchpad-wrapper.privacymanager.io/9fab0bf6-df63-42ca-acc5-caf4de668f40/launchpad-liveramp.js</div>`)[0];
+                popup_cabac8e807aefb481b9a0825f6ae8f04.setContent(html_240d8a9f17e8b78df679d0991f086956);
+            
+        
+
+        marker_385814bf3ce95a9fafc151c2f4fbb55e.bindPopup(popup_cabac8e807aefb481b9a0825f6ae8f04)
+        ;
+
+        
+    
+    
+                marker_385814bf3ce95a9fafc151c2f4fbb55e.setIcon(icon_69a86209f02ac4e941847f6f2a206d5f);
+            
+    
+            var marker_f03d11234c2db829e708566b2508d4d2 = L.marker(
+                [41.6005, -93.6091],
+                {
+}
+            ).addTo(marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca);
+        
+    
+            var icon_035fb6e600ab1704bc0d0efdfcf9e3a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a0ff5383a867f1f7912439bcf291ad1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4c618707c4dd398324b641cdb23e0dd = $(`<div id="html_b4c618707c4dd398324b641cdb23e0dd" style="width: 100.0%; height: 100.0%;">IP: 20.40.202.2<br>URL: https://collector.brandmetrics.com/c.js?siteid=4486dfe2-780e-4dfa-a60a-2a948887658f&toploc=www.nytimes.com&rnd=9072549</div>`)[0];
+                popup_0a0ff5383a867f1f7912439bcf291ad1.setContent(html_b4c618707c4dd398324b641cdb23e0dd);
+            
+        
+
+        marker_f03d11234c2db829e708566b2508d4d2.bindPopup(popup_0a0ff5383a867f1f7912439bcf291ad1)
+        ;
+
+        
+    
+    
+                marker_f03d11234c2db829e708566b2508d4d2.setIcon(icon_035fb6e600ab1704bc0d0efdfcf9e3a8);
+            
+    
+            marker_cluster_e86a312f37af7b88a45dbcf401f9b3ca.addTo(map_27bf6befa16e761b5591fdd7bc2e06b4);
+        
+</script>
+</html>
