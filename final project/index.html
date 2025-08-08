@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ridgewood Building Highlights</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    html, body, #map { height: 100%; width: 100%; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  const map = new maplibregl.Map({
+    container: 'map',
+    style: 'style.json',
+    center: [-73.9025, 40.7075],
+    zoom: 15.5,
+    pitch: 45
+  });
+
+  map.on('load', () => {
+    map.addSource('ridgewood-buildings', {
+      type: 'geojson',
+      data: 'filtered_within_boundary.geojson'
+    });
+
+    map.addLayer({
+      id: 'highlighted-buildings',
+      type: 'fill-extrusion',
+      source: 'ridgewood-buildings',
+      paint: {
+        'fill-extrusion-color': '#38658F',
+        'fill-extrusion-height': [
+          'interpolate',
+          ['linear'],
+          ['get', 'BuiltFAR'],
+          0, 0,
+          5, 50
+        ],
+        'fill-extrusion-opacity': 0.8
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
