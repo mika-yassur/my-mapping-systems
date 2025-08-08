@@ -16,9 +16,9 @@
 <script>
   const map = new maplibregl.Map({
     container: 'map',
-    style: 'style.json',
+    style: 'style2.json',
     center: [-73.9025, 40.7075],
-    zoom: 15.5,
+    zoom: 14.5,
     pitch: 45
   });
 
@@ -33,7 +33,7 @@ map.addLayer({
   type: 'fill-extrusion',
   source: 'ridgewood-buildings',
   paint: {
-    'fill-extrusion-color': '#38658F',
+    'fill-extrusion-color': '#a27760',
     'fill-extrusion-height': [
       '*',
       ['get', 'NumFloors'],
@@ -49,7 +49,7 @@ map.addLayer({
   type: 'fill-extrusion',
   source: 'ridgewood-buildings',
   paint: {
-    'fill-extrusion-color': '#25506d',
+    'fill-extrusion-color': '#50331e',
     'fill-extrusion-height': [
       '*',
       ['get', 'NumFloors'],
@@ -72,7 +72,7 @@ map.addLayer({
   id: 'building-walls',
   type: 'fill-extrusion',
   source: 'ridgewood-buildings',
-  filter: ['>', ['get', 'area'], 50], // only polygons with area > 50 (adjust as needed)
+  filter: ['>', ['get', 'area'], 50], 
   paint: {
     'fill-extrusion-color': '#38658F',
     'fill-extrusion-height': [
