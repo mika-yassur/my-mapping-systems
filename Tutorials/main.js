@@ -88,23 +88,109 @@ async function queryWithinDistance(point, n = 1000) {
           // do other stuff here later...
         }
       }
-#keep working on things here
-  map.on('load', () => {        
-      map.addSource('open-restaurant-inspections', {
-          type: 'geojson',
-          data: data
-      });
 
-      map.addLayer({
-          'id': 'restaurants-layer',
-          'type': 'circle',
-          'source': 'open-restaurant-inspections',
-      });
-    })
+      // Convert the data to GeoJSON format
+  const geojsonData = {
+    type: 'FeatureCollection',
+    features: data.map(restaurant => ({
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [restaurant.long, restaurant.lat]
+      },
+      properties: {
+        RestaurantInspectionID: restaurant.restaurantinspectionid,
+        name: restaurant.name,
+        seating_choice: restaurant.seating_choice,
+        inspection_date: restaurant.inspection_date,
+        compliance: restaurant.compliance,
+        dist_meters: restaurant.dist_meters
+      }
+    }))
+  };
 
-map.on("click", (e) => {
-    const point = [e.lngLat.lng, e.lngLat.lat];
-    queryWithinDistance(point, 1000); 
-});
+  // Remove existing inspection layer if it exists
+  if (map.getLayer('inspection-layer')) {
+    map.removeLayer('inspection-layer');
+  }
+  if (map.getSource('inspections')) {
+    map.removeSource('inspections');
+  }
+
+  // Add the inspection data as a new source
+  map.addSource('inspections', {
+    type: 'geojson',
+    data: geojsonData
+  });
+
+  // Add a layer for inspection points with styling based on compliance
+  map.addLayer({
+    id: 'inspection-layer',
+    type: 'circle',
+    source: 'inspections',
+    paint: {
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['get', 'dist_meters'],
+        0, 8,     // Closest restaurants get larger circles
+        500, 6,   // Medium distance
+        1000, 4   // Furthest restaurants get smaller circles
+      ],
+      'circle-color': [
+        'case',
+        ['==', ['get', 'is_roadway_compliant'], 'Compliant'], '#00aa00',  // Green for compliant
+        ['==', ['get', 'is_roadway_compliant'], 'Non-Compliant'], '#ff4444',  // Red for non-compliant
+        ['==', ['get', 'is_roadway_compliant'], 'For HIQA Review'], '#ffaa00',  // Orange for under review
+        ['==', ['get', 'is_roadway_compliant'], 'Under Review'], '#ffaa00',  // Orange for under review
+        ['==', ['get', 'is_roadway_compliant'], 'Cease and Desist'], '#aa0000',  // Dark red for cease and desist
+        ['==', ['get', 'is_roadway_compliant'], 'Suspended and Deactivated'], '#800080',  // Purple for suspended
+        ['==', ['get', 'is_roadway_compliant'], 'Removed and Deactivated'], '#400040',  // Dark purple for removed
+        '#4247dfff'  // Gray for other/unknown status
+      ],
+      'circle-stroke-width': [
+        'case',
+        ['in', ['get', 'is_roadway_compliant'], ['literal', ['Cease and Desist', 'Suspended and Deactivated', 'Removed and Deactivated']]], 3,  // Thicker border for serious violations
+        2
+      ],
+      'circle-stroke-color': 'white',
+      'circle-opacity': 0.8
+    },
+  });
+
+  // Add click handler for inspection points
+  map.on("click", "inspection-layer", (e) => {
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const properties = e.features[0].properties;
+    
+    // Format the inspection date
+    const inspectionDate = properties.inspection_date ? 
+      new Date(properties.inspection_date).toLocaleDateString() : 'N/A';
+    
+    const popupContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 280px;">
+        <h3 style="margin: 0 0 15px 0; color: #333;">${properties.name}</h3>
+        <p style="margin: 8px 0; font-size: 14px;"><strong>Inspected On:</strong> ${inspectionDate}</p>
+        <p style="margin: 8px 0; font-size: 14px;"><strong>Roadway Compliance:</strong> ${properties.compliance || 'N/A'}</p>
+      </div>
+    `;
+    
+    new maplibregl.Popup()
+      .setLngLat(coordinates)
+      .setHTML(popupContent)
+      .addTo(map);
+  });
+
+  // Change cursor on hover
+  map.on('mouseenter', 'inspection-layer', () => {
+    map.getCanvas().style.cursor = 'pointer';
+  });
+
+  map.on('mouseleave', 'inspection-layer', () => {
+    map.getCanvas().style.cursor = '';
+  });
+
+
+
 
     
